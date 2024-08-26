@@ -9,7 +9,7 @@ return {
             transparent_background = true,
             show_end_of_buffer = false,
       })
-      vim.cmd.colorscheme "catppuccin-mocha"
+      --vim.cmd.colorscheme "catppuccin-mocha"
     end
   }
 }

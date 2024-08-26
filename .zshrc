@@ -135,8 +135,8 @@ eval $(thefuck --alias)
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
 
-fastfetch
-
+pokeget gengar
+pfetch
 alias skullz="~/.config/skullz/skullz"
 alias blocks="~/.config/blocks/blocks"
 alias bang="~/.config/crunchbang/crunchbang"

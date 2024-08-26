@@ -25,11 +25,11 @@ return{
             -- Example:
             bg = "#000000",
             green = "#00ff00",
-            magenta = "#7aa2f7",
+            magenta = "#736fda",
         },
     },
         })
-   --vim.cmd("colorscheme cyberdream")
+  -- vim.cmd("colorscheme cyberdream")
     end,
 }
 
