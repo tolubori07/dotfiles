@@ -1,0 +1,1 @@
+.config/sketchybar/init.lua

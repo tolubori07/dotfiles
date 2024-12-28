@@ -85,6 +85,7 @@ eval "$(fzf --zsh)"
 function pywal {
   current_wallpaper="$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')"
   wal -i "$current_wallpaper" -n 2>/dev/null
+  ghosttywal
 }
 
 
@@ -143,3 +144,4 @@ export PKG_CONFIG_PATH=$(brew --prefix gtk4)/lib/pkgconfig:$PKG_CONFIG_PATH
 export PKG_CONFIG_PATH=$(brew --prefix graphene)/lib/pkgconfig:$PKG_CONFIG_PATH
 export PKG_CONFIG_PATH=$(brew --prefix cairo)/lib/pkgconfig:$PKG_CONFIG_PATH
 wallpaper () { automator -i "${1}" ~/wallchooser.workflow }
+export PATH="$HOME/.local/bin:$PATH"
