@@ -47,6 +47,26 @@ yabai -m config                                 \
 yabai -m rule --add app!="^(Stickies)$" manage=off \
 borders active_color=0xff736fda width=8.0 &
 yabai -m config external_bar all:50:0
+source ~/.cache/wal/colors.sh # pywal scheme - update if needed
+yabai -m signal --add app='^Ghostty$' event=window_created action='yabai -m space --layout bsp'
+yabai -m signal --add app='^Ghostty$' event=window_destroyed action='yabai -m space --layout bsp'
+
+# yabai template colours
+CBACK=$(echo $background | sed 's/#//')
+CFORE=$(echo $foreground | sed 's/#//')
+CACTV=$(echo $color3 | sed 's/#//')
+CNORM=$(echo $color1 | sed 's/#//')
+CINSE=$(echo $foreground | sed 's/#//')
+
+yabai -m config status_bar                   on
+yabai -m config status_bar_background_color  0xff$CBACK
+yabai -m config status_bar_foreground_color  0xff$CFORE
+
+yabai -m config window_border                on
+yabai -m config window_border_width          4
+yabai -m config active_window_border_color   0xff$CACTV
+yabai -m config normal_window_border_color   0xff$CNORM
+yabai -m config insert_window_border_color   0xff$CINSE
 # S K E T C H Y B A R  E V E N T S
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus &> /dev/null"
 yabai -m signal --add event=window_title_changed action="sketchybar --trigger title_change &> /dev/null"

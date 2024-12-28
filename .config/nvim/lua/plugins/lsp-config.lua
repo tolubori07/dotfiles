@@ -20,7 +20,7 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
+      lspconfig.ts_ls.setup({
         capabilities = capabilities,
       })
       lspconfig.solargraph.setup({
@@ -40,6 +40,7 @@ return {
       })
       lspconfig.clangd.setup({
         capabilities = capabilities,
+        cmd = { "clangd", "--background-index", "--clang-tidy", "--log=verbose" },
       })
       lspconfig.astro.setup({
         capabilities = capabilities,
@@ -47,7 +48,15 @@ return {
       lspconfig.jsonls.setup({
         capabilities = capabilities,
       })
-
+      lspconfig.zls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.julials.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
+      })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

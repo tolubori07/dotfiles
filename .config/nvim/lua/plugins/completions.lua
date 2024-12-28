@@ -42,6 +42,7 @@ return {
         }),
         formatting = {
           format = require("lspkind").cmp_format({
+            require("tailwindcss-colorizer-cmp").formatter,
             before = require("tailwind-tools.cmp").lspkind_format,
           }),
         },

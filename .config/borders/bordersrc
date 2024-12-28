@@ -1,11 +1,17 @@
 #!/bin/bash
+source ~/.cache/wal/colors.sh # pywal scheme - update if needed
+CBACK=$(echo $background | sed 's/#//')
+CFORE=$(echo $foreground | sed 's/#//')
+CACTV=$(echo $color3 | sed 's/#//')
+CNORM=$(echo $color1 | sed 's/#//')
+CINSE=$(echo $foreground | sed 's/#//')
 
 options=(
 	style=round
 	width=7.5
-	hidpi=off
-	active_color=0xff736fda
-  blur_radius=2.5
+	hidpi=on
+	active_color=0xffb5bff4
+  blur_radius=5.5
 )
 
 borders "${options[@]}"

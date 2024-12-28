@@ -5,8 +5,7 @@
 ## HYPER == SHIFT + CMD + ALT + OPTION
 
 ## Quickly restart the yabai launch agent
-ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
-
+ctrl + alt + cmd - r : yabai --restart-service 
 ## Close active application
 hyper - backspace : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 
@@ -22,6 +21,8 @@ hyper - o : /Applications/Obsidian.app/Contents/MacOS/Obsidian
 hyper - v : /Applications/VSCode.app/Contents/MacOS/Electron
 #open firefox
 hyper - x : /Applications/Firefox.app/Contents/MacOS/firefox
+#Open Zen browser
+hyper - z : /Applications/Zen Browser.app/Contents/MacOS/zen
 #open anki
 hyper - n : /Applications/Anki.app/Contents/MacOS/anki
 #open alacritty
@@ -29,6 +30,8 @@ hyper - t : /Applications/Alacritty.app/Contents/MacOS/alacritty
 #open discord
 ctrl +cmd - d  : /Applications/Discord.app/Contents/MacOs/Discord
 ctrl +cmd - k  : /Applications/Kitty.app/Contents/MacOs/kitty
+ctrl +cmd - g  : /Applications/Ghostty.app/Contents/MacOs/ghostty
+ctrl + cmd -s  : brew services restart sketchybar
 
 ## swap window
 hyper - h : yabai -m window --swap east
@@ -90,6 +93,8 @@ hyper + shift - 4 : yabai -m space --mirror y-axis
 ## toggle window fullscreen zoom
 hyper - f : yabai -m window --toggle zoom-fullscreen
 
+hyper - f : yabai -m window --toggle zoom-fullscreen
+
 # cycle through windows
 # cycle backwards
 #hyper - i : yabai -m query --spaces | jq -re ".[] | select(.visible == 1).index" | xargs -I{} yabai -m query --windows --space {} | jq -sre "add | sort_by(.display, .frame.x, .frame.y, .id) | nth(index(map(select(.focused == 1))) - 1).id" | xargs -I{} yabai -m window --focus {}
@@ -128,8 +133,6 @@ hyper - w : yabai -m window --focus north
 hyper - a : yabai -m window --focus west
 hyper - s : yabai -m window --focus south
 hyper - d : yabai -m window --focus east
-
-:: default : sketchybar --trigger skhd_enabled SKHD_ENABLED=false; sketchybar --trigger request_bg REQUEST_BG=false;
 :: bg_select : sketchybar --trigger skhd_enabled SKHD_ENABLED=false; sketchybar --trigger request_bg REQUEST_BG=true;
 
 # -- WALLPAPER SELECT -- #

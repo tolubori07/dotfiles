@@ -1,150 +1,145 @@
-#keychain id_rsa --agents ssh  # moved before instant prompt
+# Set ZSH theme
+ZSH_THEME="fox" # Current theme
+# Uncomment to use Powerlevel10k if desired
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# OK to perform console I/O before this point.
+# Keychain for SSH (moved before instant prompt)
+# keychain id_rsa --agents ssh  
+
+# Enable p10k-instant-prompt for faster ZSH load
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-# From this point on, until zsh is fully initialized, console input won't work and
-# console output may appear uncolored.
 
-#chatty-script >/dev/null      # spam output suppressed
-# ...
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
+# Path to Oh My Zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
+# Oh My Zsh update settings
+zstyle ':omz:update' mode auto      # Update automatically
+# Uncomment to change frequency (in days)
 # zstyle ':omz:update' frequency 13
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+# Command correction and completion settings
+ENABLE_CORRECTION="true"           # Enable auto-correction
+COMPLETION_WAITING_DOTS="true"     # Show dots during completion
 
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
+# Plugins
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+)
 
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions)
-
+# Source Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# Preferred editor
+export EDITOR='nvim'
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-
+# Aliases for Neovim configurations
 alias chad="NVIM_APPNAME=NvChad nvim"
 alias lvim='NVIM_APPNAME=lazyvim nvim'
 alias avim='NVIM_APPNAME=astronvim nvim'
+alias rvim='NVIM_APPNAME=rvim nvim'
+alias pvim='NVIM_APPNAME=pvim nvim'
+alias dvim='NVIM_APPNAME=dvim nvim'
+
+# Useful aliases
+alias ls="colorls"               # Colorized ls
 alias rustk='rusty-krab-manager -c ~/.config/rusty-krab-manager/config.toml'
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-alias ls="colorls"
-
-setopt AUTOCD
-
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-PATH=~/.console-ninja/.bin:$PATH
-
-# bun completions
-[ -s "/Users/moshoodbello/.bun/_bun" ] && source "/Users/moshoodbello/.bun/_bun"
-
-
-eval $(thefuck --alias)
-# ---- FZF -----
-
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --zsh)"
-
-pokeget gengar
-pfetch
 alias skullz="~/.config/skullz/skullz"
 alias blocks="~/.config/blocks/blocks"
 alias bang="~/.config/crunchbang/crunchbang"
 alias pacman="~/.config/pacman/pacman"
 alias kaisen="~/.config/kaisen"
+alias bonk="~/coding/justcoding/clang/bonk/bonk"
+
+# Automatically change to a directory by typing its name
+setopt AUTOCD
+
+# Path adjustments
+export PATH="$HOME/.console-ninja/.bin:$HOME/go/bin/mdx:$BUN_INSTALL/bin:/usr/local/opt/ruby/bin:/usr/local/Cellar/llvm/19.1.4/bin:$PATH"
+export PATH="$PATH:${HOME}/Library/Python/3.12/lib/python/site-packages"
+
+export PATH="/Users/moshoodbello/.local/bin:$PATH"
+
+# bun completions
+[ -s "/Users/moshoodbello/.bun/_bun" ] && source "/Users/moshoodbello/.bun/_bun"
+
+# Starship prompt
+eval "$(starship init zsh)"
+
+# TheFuck alias
+eval $(thefuck --alias)
+
+
+# fzf setup
+eval "$(fzf --zsh)"
+
+# Pywal function
+#function pywal {
+  # Generate color scheme from current wallpaper
+ # current_wallpaper="$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')"
+  #wal -i "$current_wallpaper" -n
+#}
+function pywal {
+  current_wallpaper="$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')"
+  wal -i "$current_wallpaper" -n 2>/dev/null
+}
+
+
+# Fastfetch (run conditionally outside SSH sessions)
+if [[ $TERM_PROGRAM != "ssh" ]]; then
+  fastfetch
+fi
+
+# Node Version Manager (NVM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+# Compilation flags
+#export CXXFLAGS="-std=c++17"
+
+# Uncomment and set to enable history timestamp
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Uncomment to disable VCS untracked file checks for performance
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment to set custom language environment
+# export LANG=en_US.UTF-8
+
+# Uncomment and set for manual MANPATH configuration
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# Uncomment to disable magic functions if pasting is an issue
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment to disable auto-setting terminal title
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment for case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Uncomment for hyphen-insensitive completion
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment to enable instant-prompt configuration
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH="/usr/local/Cellar/llvm/19.1.5/bin/llvm-config:$PATH"
+export PATH="/usr/local/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/llvm/lib"
+export CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH=$PATH:"$HOME/go/bin/mdx"
-eval "$(starship init zsh)"
+export PKG_CONFIG_PATH=$(brew --prefix gtk4)/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=$(brew --prefix graphene)/lib/pkgconfig:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH=$(brew --prefix cairo)/lib/pkgconfig:$PKG_CONFIG_PATH
+wallpaper () { automator -i "${1}" ~/wallchooser.workflow }

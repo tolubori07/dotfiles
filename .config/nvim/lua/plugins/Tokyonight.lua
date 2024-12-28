@@ -10,7 +10,7 @@ return {
        sidebars = "transparent",
        floats = "transparent",
         },
-      --vim.cmd [[colorscheme tokyonight]]
+      vim.cmd [[colorscheme tokyonight]]
       })
   end
   }

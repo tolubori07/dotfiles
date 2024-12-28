@@ -10,7 +10,7 @@ local colors =  {
   grey = 0xff939ab7,
   transparent = 0x00000000,
   mauve = 0xffc6a0f7,
-  purple = 0xff736fda,
+  purple =0xffb5bff9,
   dark = 0xff051b2c,
 
   bar = {
