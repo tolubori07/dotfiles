@@ -85,7 +85,7 @@ eval "$(fzf --zsh)"
 function pywal {
   current_wallpaper="$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')"
   wal -i "$current_wallpaper" -n 2>/dev/null
-  ghosttywal
+ # ghosttywal
 }
 
 

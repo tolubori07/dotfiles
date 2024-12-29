@@ -1,1 +1,0 @@
-.config/sketchybar/bar.lua
