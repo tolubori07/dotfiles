@@ -53,8 +53,44 @@ local lyfe = {
     " ███████████       █████       █████          ██████████",
     "░░░░░░░░░░░       ░░░░░       ░░░░░          ░░░░░░░░░░ "
 }
+local ghostty= {
+    "                                      <span class=\"b\">++==**%%*%%%%%%*%%**==++</span>                                      ",
+    "                                  <span class=\"b\">==***%xx</span>                <span class=\"b\">xx%***==</span>                                  ",
+    "                              <span class=\"b\">++**++</span>                            <span class=\"b\">++**++</span>                              ",
+    "                          <span class=\"b\">x+**++</span>          x=*$$@@@@@@$$*=x          <span class=\"b\">++**+x</span>                          ",
+    "                        <span class=\"b\">++**~o</span>      ~*$@@@@@@@$$$$$$$$@@@@@@@$*~      <span class=\"b\">oo**++</span>                        ",
+    "                      <span class=\"b\">++**</span>       +$@@@$$$$$$$$$$$$$$$$$$$$$$$$@@@$+       <span class=\"b\">**++</span>                      ",
+    "                    <span class=\"b\">xx**</span>      ~$@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@$~      <span class=\"b\">**xx</span>                    ",
+    "                    <span class=\"b\">==+~</span>    ~@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@@~    <span class=\"b\">~+==</span>                    ",
+    "                  <span class=\"b\">++++</span>     $@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@$     <span class=\"b\">++++</span>                  ",
+    "                  <span class=\"b\">==</span>     ~@$$$$$@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@~     <span class=\"b\">==</span>                  ",
+    "                <span class=\"b\">x+++</span>    o@$$$$@@%$@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@o    <span class=\"b\">+++x</span>                ",
+    "                <span class=\"b\">+++~</span>    @$$$$$      x%@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@    <span class=\"b\">~+++</span>                ",
+    "                <span class=\"b\">==</span>     $$$$$$$          x$@@@$$$$$$$@@@@@@@@@@@@@@@@@@$$$$$$$     <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>     @$$$$$@*             +@$$$$$@%o··············~=@$$$$$@     <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·$$$$$$$@@@$=           $$$$@~                   @$$$$$·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$@@$*o           $$$$@x                   @$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$+            ~*@$$$$$@$=xxxxxxxxxxxxxx+%@$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$         ~*@@@@$$$$$$$$@@@@@@@@@@@@@@@@@$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$o    ·=@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$@@@@@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ·@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@·    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>    ~$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$~    <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==</span>     @$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@     <span class=\"b\">==</span>                ",
+    "                <span class=\"b\">==x·</span>    @@@$$$$$$$$$$@@@@@@@@$$$$$$$$$$@@@@@@@@$$$$$$$$$$$@@     <span class=\"b\">x==</span>                ",
+    "                <span class=\"b\">++++</span>     o$@@@@@@@@@@+     ~*@@@@@@@@@@*~     +@@@@@@@@@@$x     <span class=\"b\">++++</span>                ",
+    "                  <span class=\"b\">==+x</span>       ·oxo~              ~oo~              ~oxo·       <span class=\"b\">o+*=</span>                  ",
+    "                  <span class=\"b\">x+**+x</span>                <span class=\"b\">=*</span>                <span class=\"b\">*=</span>                <span class=\"b\">++**xx</span>                  ",
+    "                    <span class=\"b\">x+==**+*+o</span>    <span class=\"b\">++*=**==**=*+x</span>    <span class=\"b\">x+*=**==**=*++</span>    <span class=\"b\">~+*=**==xx</span>                    ",
+    "                        <span class=\"b\">++++******==++</span>    <span class=\"b\">++++********++++</span>    <span class=\"b\">++==******+++x</span>                        ",
+}
 
-local arr = {night, pattern, lyfe}
+
+local arr = {night, pattern, lyfe, ghostty}
 
 return {
     "nvimdev/dashboard-nvim",
@@ -63,7 +99,7 @@ return {
         require("dashboard").setup({
             theme = "hyper",
             config = {
-                header = arr[math.random(1, #arr)], -- Fixed random selection
+                header = arr[math.random(1, 4)], -- Fixed random selection
             },
         })
     end,
