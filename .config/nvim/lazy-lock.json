@@ -64,6 +64,7 @@
   "nvim-dap-ui": { "branch": "master", "commit": "ffa89839f97bad360e78428d5c740fdad9a0ff02" },
   "nvim-lspconfig": { "branch": "master", "commit": "d2d153a179ed59aa7134d7ebdf4d7dcb156efa22" },
   "nvim-nio": { "branch": "master", "commit": "a428f309119086dc78dd4b19306d2d67be884eee" },
+  "nvim-notify": { "branch": "master", "commit": "fbef5d32be8466dd76544a257d3f3dce20082a07" },
   "nvim-treesitter": { "branch": "master", "commit": "7646c1c12a3121562aa87fd79aace48c728ac096" },
   "nvim-web-devicons": { "branch": "master", "commit": "19d257cf889f79f4022163c3fbb5e08639077bd8" },
   "oxocarbon": { "branch": "main", "commit": "004777819ba294423b638a35a75c9f0c7be758ed" },
@@ -83,5 +84,5 @@
   "vim-fugitive": { "branch": "master", "commit": "d4877e54cef67f5af4f950935b1ade19ed6b7370" },
   "vimtex": { "branch": "master", "commit": "44a2f1203ce2b6fcf1ff2b03aeca52c45f8a157e" },
   "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" },
-  "zitchdog": { "branch": "main", "commit": "f1a0ff05880a2f36018276544f0febefab5ab613" }
+  "window-picker": { "branch": "main", "commit": "41cfaa428577c53552200a404ae9b3a0b5719706" }
 }
