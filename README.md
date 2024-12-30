@@ -11,15 +11,13 @@ These are the configurations for my Macos daily driver
  - Hotkeys: [SKHD](https://github.com/koekeishiya/skhd)
  - Wallpapers: [Wallhaven](https://wallhaven.cc)
  - [Pokeget](https://github.com/talwat/pokeget)
- - Terminal: [Alacritty](https://github.com/alacritty/alacritty) but tend to use [kitty](https://github.com/kovidgoyal/kitty) more nowadays
+ - Terminal: [Ghostty](https://ghostty.org/) but also have [kitty](https://github.com/kovidgoyal/kitty) as a backup of some sort
  - File Manager: [yazi](https://github.com/sxyazi/yazi)
  - Clock: [tty-clock](https://github.com/xorg62/tty-clock)
  - [Btop](https://github.com/aristocratos/btop)
- - Editor: [Neovim](https://github.com/neovim/neovim)
+ - Editor: Custom [Neovim](https://github.com/neovim/neovim) config
  
  
-
-
 ## Screen Shot
 
 <img width="1440" alt="Screenshot1" src="https://github.com/user-attachments/assets/71f27d15-a160-40bd-adec-5562b6d9241a" />
