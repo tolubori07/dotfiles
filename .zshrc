@@ -7,9 +7,9 @@ ZSH_THEME="fox" # Current theme
 # keychain id_rsa --agents ssh  
 
 # Enable p10k-instant-prompt for faster ZSH load
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
 # Path to Oh My Zsh installation
 export ZSH="$HOME/.oh-my-zsh"
@@ -145,3 +145,4 @@ export PKG_CONFIG_PATH=$(brew --prefix graphene)/lib/pkgconfig:$PKG_CONFIG_PATH
 export PKG_CONFIG_PATH=$(brew --prefix cairo)/lib/pkgconfig:$PKG_CONFIG_PATH
 wallpaper () { automator -i "${1}" ~/wallchooser.workflow }
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/shell-color-scripts/colorscripts:$PATH"
