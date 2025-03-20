@@ -56,11 +56,12 @@ font-family-italic = JetBrainsMono NFM Italic
 font-family-bold-italic = JetBrainsMono NFM Bold Italic
 window-title-font-family = 04b
 copy-on-select = clipboard
-macos-titlebar-proxy-icon = hidden
+macos-titlebar-proxy-icon = hidden 
 macos-icon = custom-style
 macos-icon-frame = chrome
-#macos-icon-ghost-color = #ffffff
-#macos-icon-screen-color = #4b5b83
+macos-icon-ghost-color = #ffffff
+macos-icon-screen-color = #4b5b83
+macos-titlebar-style = hidden
 
 # The named font style to use for each of the requested terminal font styles.
 # This looks up the style based on the font style string advertised by the
@@ -353,7 +354,7 @@ freetype-load-flags = hinting,force-autohint,monochrome,autohint
 # 
 theme = /Users/moshoodbello/.cache/wal/ghosttywal 
 window-inherit-font-size = true
-window-theme = ghostty
+window-theme = dark
 scrollback-limit = 4
 #config-file = ~/.cache/wal/ghosttywal
 # Background color for the window.

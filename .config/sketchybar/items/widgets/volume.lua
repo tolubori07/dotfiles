@@ -10,7 +10,7 @@ local volume_percent = sbar.add("item", "widgets.volume1", {
   label = {
     string = "??%",
     padding_left = -1,
-    font = { family = settings.font.numbers }
+    font = { family = settings.font.numbers },
   },
 })
 
@@ -39,15 +39,15 @@ local volume_icon = sbar.add("item", "widgets.volume2", {
 
 local volume_bracket = sbar.add("bracket", "widgets.volume.bracket", {
   volume_icon.name,
-  volume_percent.name
+  volume_percent.name,
 }, {
-  background = { color = colors.bg2},
-  popup = { align = "center" }
+  background = { color = colors.bg2 },
+  popup = { align = "center" },
 })
 
 sbar.add("item", "widgets.volume.padding", {
   position = "right",
-  width = settings.group_paddings
+  width = settings.group_paddings,
 })
 
 local volume_slider = sbar.add("slider", popup_width, {
@@ -60,13 +60,13 @@ local volume_slider = sbar.add("slider", popup_width, {
       corner_radius = 3,
       color = colors.bg2,
     },
-    knob= {
+    knob = {
       string = "􀀁",
       drawing = true,
     },
   },
   background = { color = colors.bg2, height = 2, y_offset = -20 },
-  click_script = 'osascript -e "set volume output volume $PERCENTAGE"'
+  click_script = 'osascript -e "set volume output volume $PERCENTAGE"',
 })
 
 volume_percent:subscribe("volume_change", function(env)
@@ -94,9 +94,11 @@ end)
 
 local function volume_collapse_details()
   local drawing = volume_bracket:query().popup.drawing == "on"
-  if not drawing then return end
+  if not drawing then
+    return
+  end
   volume_bracket:set({ popup = { drawing = false } })
-  sbar.remove('/volume.device\\.*/')
+  sbar.remove("/volume.device\\.*/")
 end
 
 local current_audio_device = "None"
@@ -116,7 +118,7 @@ local function volume_toggle_details(env)
         local color = colors.grey
         local counter = 0
 
-        for device in string.gmatch(available, '[^\r\n]+') do
+        for device in string.gmatch(available, "[^\r\n]+") do
           local color = colors.grey
           if current == device then
             color = colors.white
@@ -126,8 +128,12 @@ local function volume_toggle_details(env)
             width = popup_width,
             align = "center",
             label = { string = device, color = color },
-            click_script = 'SwitchAudioSource -s "' .. device .. '" && sketchybar --set /volume.device\\.*/ label.color=' .. colors.grey .. ' --set $NAME label.color=' .. colors.white
-
+            click_script = 'SwitchAudioSource -s "'
+                .. device
+                .. '" && sketchybar --set /volume.device\\.*/ label.color='
+                .. colors.grey
+                .. " --set $NAME label.color="
+                .. colors.white,
           })
           counter = counter + 1
         end

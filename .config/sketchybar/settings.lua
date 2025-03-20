@@ -19,9 +19,5 @@ return {
        ["Black"] = "ExtraBold",
      },
    },
-   wallpaper = {
-    path = os.getenv("HOME") .. "/wallpapers",
-    scale = 0.09,
-  }
 }
 
