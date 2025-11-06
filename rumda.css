@@ -96,13 +96,13 @@ body {
   --text-5: #5a3a25; /* muted channels/chats and timestamps */
 
   /* background and dark colors */
-  --bg-1: #f0d4bb; /* dark buttons when clicked */
-  --bg-2: #a86943; /* dark buttons */
-  --bg-3: #f0d4bb; /* spacing, secondary elements */
-  --bg-4: #f2cdac; /* main background color */
-  --hover: #a86943; /* channels and buttons when hovered */
-  --active: #c99d71; /* channels and buttons when clicked or selected */
-  --active-2: #c99d71; /* extra state for transparent buttons */
+  --bg-1: #7fa1a8; /* dark buttons when clicked */
+  --bg-2: #327aaa; /* dark buttons */
+  --bg-3: #a8bebf; /* spacing, secondary elements */
+  --bg-4: #7fa1a8; /* main background color */
+  --hover: #327aaa; /* channels and buttons when hovered */
+  --active: #56a2a5; /* channels and buttons when clicked or selected */
+  --active-2: #56a2a5; /* extra state for transparent buttons */
   --message-hover: #dbac81; /* messages when hovered */
 
   /* accent colors */
