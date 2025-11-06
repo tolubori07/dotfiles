@@ -30,7 +30,7 @@ hyper - t : /Applications/Alacritty.app/Contents/MacOS/alacritty
 #open discord
 ctrl + cmd - d : /Applications/Discord.app/Contents/MacOs/Discord
 ctrl + cmd - k : /Applications/Kitty.app/Contents/MacOs/kitty
-ctrl + cmd - g : /Applications/Ghostty.app/Contents/MacOs/ghostty
+hyper - g : /Applications/Ghostty.app/Contents/MacOs/ghostty
 ctrl + cmd - s : brew services restart sketchybar
 ctrl + cmd - b : brew services restart borders
 hyper - p : pywal
@@ -42,11 +42,12 @@ hyper - k : yabai -m window --swap north
 hyper - l : yabai -m window --swap west # 0x21 is the "[" key
 
 #create new window needs SIP disabled
-hyper + ctrl - n: yabai -m space --create
-#&& \
-#                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
- #                  yabai -m window --space "${index}" && \
-  #                 yabai -m space --focus "${index}"
+# Requires SIP disabled to manage spaces
+hyper + ctrl - w : \
+  yabai -m space --create && \
+  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == false))[-1].index')" && \
+  yabai -m window --space "$index" && \
+  yabai -m space --focus "$index"
 
 ## focus display also needs SIP
 hyper - 1 : yabai -m space --focus 1

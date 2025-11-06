@@ -195,7 +195,7 @@ eval "$(fzf --zsh)"
 #}
 function pywal {
   current_wallpaper="$(osascript -e 'tell app "finder" to get posix path of (get desktop picture as alias)')"
-  wal -i "$current_wallpaper" -n 2>/dev/null
+  wal -i "$current_wallpaper" --backend colorz -n 2>/dev/null
  # ghosttywal
 }
 
@@ -262,3 +262,33 @@ export PATH="$HOME/shell-color-scripts/colorscripts:$PATH"
 eval "$(zoxide init zsh)"
 figlet -f lean LYFE
 . "/Users/moshoodbello/.deno/env"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+PATH=~/.console-ninja/.bin:$PATH
+if type brew &>/dev/null; then
+    FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+    autoload -Uz compinit
+  fi
+  export GOPATH=$(go env GOPATH)
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
+
+export PATH=$PATH:/Users/moshoodbello/.spicetify
+export PATH=$PATH:/Users/moshoodbello/helix/bin

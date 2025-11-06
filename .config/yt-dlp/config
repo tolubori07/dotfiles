@@ -1,0 +1,12 @@
+-f bestaudio
+--extract-audio
+--audio-format mp3
+--audio-quality 0
+--embed-thumbnail
+--embed-metadata
+--add-metadata
+--convert-thumbnails jpg
+--no-write-thumbnail
+--prefer-ffmpeg
+-o "%(title)s.%(ext)s"
+

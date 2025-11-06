@@ -33,13 +33,10 @@ local function set_window_title()
   sbar.exec("~/sketchybar/scripts/query_window.sh", function(result)
     if result ~= "empty" and type(result) == "table" and result.title then
       local window_title = result.title
-      if #window_title > 50 then
+      if window_title > 50 then
         window_title = window_title:sub(1, 50) .. "..."
       end
       front_app:set({ label = { string = window_title } })
-    else
-      -- Set title to Finder, as empty spaces will not return a window title
-      front_app:set({ label = { string = "Finder" } })
     end
   end)
 end

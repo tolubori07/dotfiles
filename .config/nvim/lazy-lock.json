@@ -39,6 +39,7 @@
   "gruvbox-baby": { "branch": "main", "commit": "bd52e62d8134647090108189e69c8b3cd18bdbbf" },
   "gruvbox-material": { "branch": "master", "commit": "3eb4a739a80f68b8386d13359a005ef45bf9a9eb" },
   "halfspace": { "branch": "main", "commit": "54093a7cfa0b881ee7b619603f0ece052c1e9f15" },
+  "hardtime.nvim": { "branch": "main", "commit": "882e62292ac9fc0ab764253a16d9387ed995ad94" },
   "huez.nvim": { "branch": "stable", "commit": "03e193e4aa02b5b3a439d0cc5edeb85a2f7b5415" },
   "kanagawa": { "branch": "master", "commit": "18ae5771b22d8f913ef541c827a8180b4cb12c8a" },
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
