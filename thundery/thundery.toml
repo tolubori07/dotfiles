@@ -1,0 +1,9 @@
+api_key = ""
+city = ""
+units = "metric"
+timeplus = 0
+timeminus = 0
+showcityname = false
+showdate = false
+timeformat = "24"
+use_colors = false

@@ -1,0 +1,1 @@
+../../../dotfiles/.config/sketchybar/items/init.lua

@@ -1,0 +1,1 @@
+../../../../../dotfiles/.config/sketchybar/helpers/event_providers/network_load/network_load.c

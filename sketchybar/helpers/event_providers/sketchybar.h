@@ -1,0 +1,1 @@
+../../../../dotfiles/.config/sketchybar/helpers/event_providers/sketchybar.h

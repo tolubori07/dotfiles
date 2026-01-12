@@ -1,0 +1,173 @@
+############## BAR ##############
+sketchybar --bar height=46 \
+      y_offset=6 \
+      blur_radius=10 \
+      position=top \
+      padding_left=4 \
+      padding_right=4 \
+      margin=6\
+      corner_radius=9 \
+      color=0xff24283b\
+      shadow=on \
+      border_width=5 \
+      border_color=0xff3b4261
+
+############## GLOBAL DEFAULTS ##############
+sketchybar --default updates=when_shown \
+      icon.font="SF Pro:18.0" \
+      icon.color=0xffCAD3F5 \
+      icon.highlight_color=0xff728FCB \
+      label.color=0xffCAD3F5 \
+      background.corner_radius=5 background.height=40
+
+SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
+SPACES=()
+
+for i in "${!SPACE_ICONS[@]}"; do
+      sid=$(($i + 1))
+      SPACES+=(space.$sid)
+      sketchybar --add space space.$sid center \
+            --set space.$sid associated_space=$sid \
+            icon=${SPACE_ICONS[i]} \
+            icon.font="SF Pro:bold:17.0" \
+            icon.padding_left=12 \
+            icon.padding_right=12 \
+            icon.highlight_color=0xff4fd6be\
+            background.padding_left=-3 \
+            background.padding_right=-3 \
+            background.color=0x003C3E4F \
+            background.drawing=on \
+            click_script="yabai -m space --focus $sid" \
+            background.corner_radius=8
+done
+
+SPACE_ICONS=("一" "二" "三" "四" "五" "六" "七" "八" "九" "十")
+SPACES=()
+#sketchybar --add event window_change
+
+#COLORS_SPACE=($COLOR_YELLOW $COLOR_CYAN $COLOR_MAGENTA $COLOR_WHITE $COLOR_BLUE $COLOR_RED $COLOR_GREEN)
+#LENGTH=${#ICONS_SPACE[@]}
+#
+#for i in "${!ICONS_SPACE[@]}"
+#do
+#  sid=$(($i+1))
+#  PAD_LEFT=2
+#  PAD_RIGHT=2
+#  if [[ $i == 0 ]]; then
+#    PAD_LEFT=8
+#  elif [[ $i == $(($LENGTH-1)) ]]; then
+#    PAD_RIGHT=8
+#  fi
+#  sketchybar --add space space.$sid left                                       \
+#             --set       space.$sid script="$PLUGIN_DIR/app_space.sh"          \
+#                                    associated_space=$sid                      \
+#                                    padding_left=$PAD_LEFT                     \
+#                                    padding_right=$PAD_RIGHT                   \
+#                                    background.color=${COLORS_SPACE[i]}        \
+#                                    background.border_width=0                  \
+#                                    background.corner_radius=6                 \
+#                                    background.height=24                       \
+#                                    icon=${ICONS_SPACE[i]}                     \
+#                                    icon.color=${COLORS_SPACE[i]}              \
+#                                    label="_"                                  \
+#                                    label.color=${COLORS_SPACE[i]}             \
+#             --subscribe space.$sid front_app_switched window_change
+#done
+#
+#sketchybar --add bracket spaces '/space\..*/'                      \
+#           --set         spaces background.color=$COLOR_BACKGROUND
+#
+#sketchybar --add item seperator.l2 left                   \
+#           --set      seperator.l2 padding_left=4         \
+#                                   padding_right=4        \
+#                                   background.drawing=off \
+#                                   icon.drawing=off       \
+#                                   label.drawing=off
+
+
+############## ITEM DEFAULTS ###############
+sketchybar --default label.padding_left=6 \
+      label.padding_right=6 \
+      icon.padding_left=6 \
+      icon.padding_right=6 \
+      icon.font="SF Pro Rounded:Regular:17" \
+      label.font="SF Pro Rounded:Bold:14.0" \
+      background.height=32 \
+      background.padding_right=4 \
+      background.padding_left=4 \
+      background.corner_radius=6
+
+sketchybar --add item clock_icon left \
+      --set clock_icon icon=󰥔 \
+      icon.padding_right=8\
+      icon.padding_left=6\
+      icon.color=0xff121219 \
+      label.drawing=off \
+      padding_left=3 \
+      background.color=0xff92B3F5
+
+sketchybar --add item hour left \
+      --set hour update_freq=20 \
+      icon.drawing=off \
+      script="~/.config/sketchybar/plugins/hour.sh"\
+      background.color=0x003C3E4F \
+      background.padding_left=0
+
+sketchybar --add item min left \
+      --set min update_freq=20 \
+      icon.drawing=off \
+      script="~/.config/sketchybar/plugins/min.sh" \
+      background.color=0x003C3E4F \
+      background.padding_left=-6
+
+sketchybar --add item date_icon left \
+      --set date_icon icon=󰃭 \
+      icon.padding_right=8\
+      icon.padding_left=6\
+      icon.color=0xff121219 \
+      padding_right=8 \
+      padding_left=8 \
+      label.drawing=off \
+      background.color=0xffff9e64
+sketchybar \
+      --add item date left --set date update_freq=120 icon.drawing=off padding_right=5 label="$(date '+%d' | sed s/^0//)" \
+      --add item month left --set month update_freq=120 icon.drawing=off padding_right=5 label="$(date '+%b')" \
+      --add item day left --set day update_freq=120 icon.drawing=off padding_right=5 label="$(date '+%a')"
+
+############## RIGHT ITEMS ##############
+
+sketchybar --add item battery right \
+      --set battery update_freq=20 \
+      icon.drawing=off \
+      script="~/.config/sketchybar/plugins/power.sh"    \
+      label.padding_left=0                         \
+      icon.padding_left=0                         \
+
+sketchybar --add item power_logo right \
+      #set power_logo icon=􀛨 \
+      color=0xff121219                          \
+      label.drawing=off                         \
+      padding_right=0                            \
+      background.color=0x44ffffff                \
+
+#sketchybar  --add item  volume right                                  \
+ #          --set       volume script="~/.config/sketchybar/plugins/volume.sh"         \
+  #      background.color=0x003C3E4F \
+   #     icon.drawing=off \
+#        background.padding_left=0
+#      --subscribe volume volume_change                          \
+sketchybar --add item volume right \
+      --set volume update_freq=1\
+      icon.drawing=off \
+      script="~/.config/sketchybar/plugins/volume.sh" \
+      background.color=0x003C3E4F \
+      background.padding_left=0
+
+sketchybar --add item volume_icon right \
+      --set volume_icon icon=􀊡 \
+      icon.color=0xff121219 \
+      label.drawing=off \
+      background.color=0xffC6A0F6
+
+sketchybar --update
+echo"sketchybar configuration loaded..."

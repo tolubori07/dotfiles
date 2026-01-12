@@ -205,11 +205,6 @@ if [[ $TERM_PROGRAM != "ssh" ]]; then
   fastfetch
 fi
 
-# Node Version Manager (NVM)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-
 # Compilation flags
 #export CXXFLAGS="-std=c++17"
 
@@ -292,3 +287,9 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 
 export PATH=$PATH:/Users/moshoodbello/.spicetify
 export PATH=$PATH:/Users/moshoodbello/helix/bin
+# Node Version Manager (NVM)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+
+

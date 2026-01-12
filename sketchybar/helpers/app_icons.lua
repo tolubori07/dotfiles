@@ -1,0 +1,1 @@
+../../../dotfiles/.config/sketchybar/helpers/app_icons.lua

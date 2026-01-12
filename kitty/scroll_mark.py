@@ -1,0 +1,1 @@
+../../dotfiles/.config/kitty/scroll_mark.py

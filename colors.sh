@@ -1,0 +1,27 @@
+#!/bin/sh
+
+# Tokyo Night Color Palette
+
+export COLOR_BACKGROUND=0xe0000000
+export COLOR_FOREGROUND=0xe0d0d0d0
+
+export COLOR_ACCENT=0xe0ff9e64
+export COLOR_ACCENT_BRIGHT=0xe0f7768e
+
+export COLOR_BLACK=0xe02b303b
+export COLOR_RED=0xe0ff6188
+export COLOR_GREEN=0xe0a9dc76
+export COLOR_YELLOW=0xe0ffd866
+export COLOR_BLUE=0xe082aaff
+export COLOR_MAGENTA=0xe07f8eff
+export COLOR_CYAN=0xe0aa9dff
+export COLOR_WHITE=0xe0d0d0d0
+
+export COLOR_BLACK_BRIGHT=0xe0626b79
+export COLOR_RED_BRIGHT=0xe0ff869a
+export COLOR_GREEN_BRIGHT=0xe0c3e88d
+export COLOR_YELLOW_BRIGHT=0xe0ffe58a
+export COLOR_BLUE_BRIGHT=0xe09dcbff
+export COLOR_MAGENTA_BRIGHT=0xe09ed8ff
+export COLOR_CYAN_BRIGHT=0xe0adc6ff
+export COLOR_WHITE_BRIGHT=0xe0e2e2e2

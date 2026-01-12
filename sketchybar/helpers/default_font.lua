@@ -1,0 +1,1 @@
+../../../dotfiles/.config/sketchybar/helpers/default_font.lua

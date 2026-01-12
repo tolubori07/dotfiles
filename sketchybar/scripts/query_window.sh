@@ -1,0 +1,1 @@
+../../../dotfiles/.config/sketchybar/scripts/query_window.sh
