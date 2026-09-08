@@ -352,7 +352,7 @@ freetype-load-flags = hinting,force-autohint,monochrome,autohint
 # 
 #   - macOS: titlebar tabs style is not updated when switching themes.
 # 
-theme = /Users/moshoodbello/.cache/wal/ghosttywal 
+theme = /Users/jaabir/.cache/wal/ghosttywal 
 window-inherit-font-size = true
 window-theme = dark
 scrollback-limit = 4
@@ -997,3 +997,5 @@ window-padding-color = background
 # 
 # This defaults to true because out-of-sync rendering on macOS can
 # cause kernel panics (macOS 14.4+) and performance issues for ex... (37 KB left)
+#custom-shader=/Users/jaabir/.config/ghostty/shaders/glittchy.glsl
+#custom-shader=/Users/jaabir/.config/ghostty/shaders/water.glsl

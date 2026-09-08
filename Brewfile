@@ -1,244 +1,415 @@
-tap "anyzig/tap"
-tap "asmvik/formulae"
-tap "codecrafters-io/tap"
-tap "epk/epk"
-tap "felixkratz/formulae"
-tap "homebrew/cask-fonts"
-tap "homebrew/services"
-tap "jesseduffield/lazygit"
-tap "jesseduffield/lazynpm"
-tap "koekeishiya/formulae"
-tap "koyeb/tap"
-tap "libsql/sqld"
-tap "nikitabobko/tap"
-tap "redis-stack/redis-stack"
-tap "th-ch/youtube-music"
-tap "tursodatabase/tap"
-tap "zegervdv/zathura"
-brew "glib"
-brew "libxcb"
-brew "libx11"
-brew "pango"
-brew "jpeg-xl"
-brew "aom"
-brew "aria2"
-brew "at-spi2-core"
-brew "bazelisk"
-brew "btop"
-brew "c3c"
-brew "gcc"
-brew "cava"
-brew "cbonsai"
-brew "ccls"
-brew "pkgconf"
-brew "libmicrohttpd"
-brew "sdl2"
-brew "tesseract"
-brew "ffmpeg"
-brew "cmake"
-brew "cmatrix"
-brew "cowsay"
-brew "crystal"
-brew "curl"
-brew "delve"
-brew "espeak-ng"
-brew "exercism"
-brew "exiftool"
-brew "fastfetch"
-brew "fd"
-brew "ffmpeg@6"
-brew "ffmpegthumbnailer"
-brew "figlet"
-brew "fortune"
-brew "ftxui"
-brew "fzf"
-brew "ghostscript", link: false
-brew "git"
-brew "glfw"
-brew "go"
-brew "gowall"
-brew "graphene"
-brew "grep"
-brew "libepoxy"
-brew "gtk+3"
-brew "gtk4"
-brew "helix"
-brew "ical-buddy"
-brew "libraw"
-brew "imagemagick"
-brew "jp2a"
-brew "jq"
-brew "juliaup"
-brew "kew"
-brew "lazygit"
-brew "lolcat"
-brew "lua"
-brew "luarocks"
-brew "mecab"
-brew "mecab-ipadic"
-brew "meson"
-brew "molten-vk"
-brew "mongosh"
-brew "mongodb-atlas-cli"
-brew "mpd", restart_service: :changed
-brew "mupdf"
-brew "nasm"
-brew "neovim"
-brew "nim", link: false
-brew "numpy"
-brew "onefetch"
-brew "qt"
-brew "opencv"
-brew "pandoc"
-brew "pfetch-rs"
-brew "pidof"
-brew "pipes-sh"
-brew "poppler"
-brew "qemu"
-brew "quartz-wm"
-brew "ranger"
-brew "redis"
-brew "render"
-brew "ripgrep"
-brew "ruby"
-brew "rust"
-brew "sevenzip"
-brew "sl"
-brew "socat"
-brew "sox"
-brew "spotify_player"
-brew "stow"
-brew "television"
-brew "thefuck"
-brew "tmux"
-brew "tree"
-brew "tty-clock"
-brew "twm"
-brew "typst"
-brew "vhs"
-brew "wget"
-brew "wtf"
-brew "xplr"
-brew "yazi"
-brew "yt-dlp"
-brew "zellij"
-brew "zig"
-brew "zigup"
-brew "zoxide"
-brew "zsh-completions"
-brew "zsh-syntax-highlighting"
-brew "asmvik/formulae/yabai"
-brew "codecrafters-io/tap/codecrafters"
-brew "felixkratz/formulae/borders"
-brew "felixkratz/formulae/sketchybar"
-brew "jesseduffield/lazynpm/lazynpm"
-brew "koekeishiya/formulae/skhd"
-brew "koyeb/tap/koyeb"
-brew "tursodatabase/tap/turso"
-brew "zegervdv/zathura/zathura"
-cask "aerospace"
-cask "alacritty"
-cask "calibre"
-cask "dbeaver-community"
-cask "font-sf-mono-nerd-font"
-cask "font-symbols-only-nerd-font"
-cask "iina"
-cask "kitty"
-cask "legcord"
-cask "love"
-cask "miniconda"
-cask "redis-stack"
-cask "redis-stack-redisinsight"
-cask "redis-stack-server"
-cask "sf-symbols"
-cask "youtube-music"
-vscode "abdullahmokbl.islamic"
-vscode "aerokaido.three-js-snippets"
-vscode "alexowl.transparent-color-theme"
-vscode "alfish.godot-files"
-vscode "alice-rei.alice-carbon-theme"
-vscode "astro-build.astro-vscode"
-vscode "batisteo.vscode-django"
-vscode "bernardogualberto.solidjs"
-vscode "bobmagicii.dashyeah"
-vscode "bradlc.vscode-tailwindcss"
-vscode "brandonkirbyson.vscode-animations"
-vscode "bwork.zig-tools"
-vscode "catppuccin.catppuccin-vsc"
-vscode "catppuccin.catppuccin-vsc-icons"
-vscode "christian-kohler.npm-intellisense"
-vscode "cloudedcat.vscode-model-viewer"
-vscode "dbaeumer.vscode-eslint"
-vscode "devzstudio.emoji-snippets"
-vscode "dlasagno.wal-theme"
-vscode "donjayamanne.jquerysnippets"
-vscode "drcika.apc-extension"
-vscode "dsznajder.es7-react-js-snippets"
-vscode "eamodio.gitlens"
-vscode "enkia.tokyo-night"
-vscode "esbenp.prettier-vscode"
-vscode "firefox-devtools.vscode-firefox-debug"
-vscode "formulahendry.auto-rename-tag"
-vscode "geequlim.godot-tools"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.remotehub"
-vscode "glenn2223.live-sass"
-vscode "hedzr.zig-main-runner"
-vscode "henrytsz.nvim"
-vscode "hiwanz.codepet"
-vscode "hrhr49.vscode-markdown-tefcha"
-vscode "julialang.language-julia"
-vscode "levrotech.zig-znippets"
-vscode "lorenzopirro.zig-snippets"
-vscode "makashi.dark-purple"
-vscode "mightbesimon.emoji-icons"
-vscode "ms-azuretools.vscode-containers"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-ossdata.vscode-postgresql"
-vscode "ms-python.black-formatter"
-vscode "ms-python.debugpy"
-vscode "ms-python.isort"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
-vscode "ms-vscode.js-debug-nightly"
-vscode "ms-vscode.remote-explorer"
-vscode "ms-vscode.remote-repositories"
-vscode "ms-vsliveshare.vsliveshare"
-vscode "mvllow.rose-pine"
-vscode "nonagon.crystalline-theme"
-vscode "oven.bun-vscode"
-vscode "pkief.material-icon-theme"
-vscode "pnp.polacode"
-vscode "pranaygp.vscode-css-peek"
-vscode "riazxrazor.html-to-jsx"
-vscode "ritwickdey.liveserver"
-vscode "rust-lang.rust-analyzer"
-vscode "rvest.vs-code-prettier-eslint"
-vscode "slevesque.vscode-3dviewer"
-vscode "stxr.iconfont-preview"
-vscode "sumneko.lua"
-vscode "tonybaloney.vscode-pets"
-vscode "twxs.cmake"
-vscode "unifiedjs.vscode-mdx"
-vscode "vscode-icons-team.vscode-icons"
-vscode "wallabyjs.console-ninja"
-vscode "yy0931.vscode-sqlite3-editor"
-vscode "ziglang.vscode-zig"
-go "github.com/Achno/gocheat"
-go "github.com/vex"
-cargo "dune"
-cargo "picterm"
-cargo "pokeget"
-cargo "rmpc"
-cargo "rusty-krab-manager"
-cargo "sage"
-cargo "termchat"
-cargo "thundery"
+abseil
+ada-url
+aom
+aria2
+aribb24
+assimp
+at-spi2-core
+bash
+bazelisk
+bdw-gc
+black
+boost
+borders
+brotli
+btop
+bun
+c-ares
+c3c
+ca-certificates
+cairo
+capstone
+cava
+cbonsai
+ccls
+ceres-solver
+certifi
+cgns
+chafa
+chromaprint
+cjson
+cmake
+cmatrix
+codecrafters
+cowsay
+crystal
+curl
+dav1d
+dbus
+delve
+deno
+docker
+double-conversion
+dtc
+eigen
+espeak-ng
+exercism
+exiftool
+faad2
+fastfetch
+fd
+ffmpeg
+ffmpeg@6
+ffmpegthumbnailer
+fftw
+figlet
+flac
+fluid-synth
+fmt
+fontconfig
+fortune
+freetype
+frei0r
+fribidi
+ftxui
+fzf
+game-music-emu
+gcc
+gdk-pixbuf
+gettext
+gflags
+gh
+ghostscript
+giflib
+git
+glew
+glfw
+glib
+glog
+gmp
+gnupg
+gnutls
+go
+gowall
+gpgme
+gpgmepp
+graphene
+graphite2
+grep
+gsettings-desktop-schemas
+gtk+3
+gtk4
+gumbo-parser
+harfbuzz
+hdf5
+hdrhistogram_c
+helix
+hicolor-icon-theme
+highway
+hunspell
+hwloc
+ical-buddy
+icu4c@78
+imagemagick
+imath
+iniparser
+isl
+isort
+jasper
+jbig2dec
+jp2a
+jpeg-turbo
+jpeg-xl
+jq
+json-c
+jsoncpp
+juliaup
+kew
+koyeb
+krb5
+lame
+lazygit
+lazynpm
+leptonica
+libaec
+libao
+libapplewm
+libarchive
+libass
+libassuan
+libavif
+libb2
+libbluray
+libdatrie
+libde265
+libdeflate
+libepoxy
+libevent
+libexif
+libffi
+libgcrypt
+libgit2
+libgpg-error
+libharu
+libheif
+libice
+libid3tag
+libidn
+libidn2
+libksba
+liblinear
+libmicrohttpd
+libmikmod
+libmng
+libmpc
+libmpdclient
+libnfs
+libnghttp2
+libnghttp3
+libngtcp2
+libogg
+libomp
+libpng
+libpsl
+libraw
+librist
+librsvg
+libsamplerate
+libshout
+libslirp
+libsm
+libsndfile
+libsodium
+libsoxr
+libssh
+libssh2
+libtasn1
+libthai
+libtiff
+libtool
+libudfread
+libunibreak
+libunistring
+libupnp
+libusb
+libuv
+libvidstab
+libvmaf
+libvorbis
+libvpx
+libwebsockets
+libx11
+libxau
+libxcb
+libxdmcp
+libxext
+libxfixes
+libxi
+libxinerama
+libxmu
+libxrandr
+libxrender
+libxt
+libxtst
+libyaml
+litehtml
+little-cms2
+lld
+lld@21
+llhttp
+llvm
+llvm@21
+lolcat
+lpeg
+lua
+luajit
+luarocks
+luv
+lz4
+lzo
+m4
+mad
+mbedtls@3
+md4c
+mecab
+mecab-ipadic
+merve
+meson
+metis
+molten-vk
+mongodb-atlas-cli
+mongosh
+mpd
+mpdecimal
+mpfr
+mpg123
+mupdf
+nasm
+nbytes
+ncurses
+neovim
+netcdf
+nettle
+nim
+ninja
+nlohmann-json
+nmap
+node
+npth
+nspr
+nss
+numpy
+onefetch
+oniguruma
+onnx
+open-mpi
+openblas
+opencore-amr
+opencv
+openexr
+openjpeg
+openjph
+openssl@3
+openvino
+opus
+opusfile
+p11-kit
+pandoc
+pango
+pcaudiolib
+pcre2
+pfetch-rs
+pidof
+pinentry
+pipes-sh
+pipx
+pixman
+pkgconf
+pmix
+poppler
+portaudio
+postgresql@18
+prettier
+prettierd
+proj
+protobuf
+prrte
+pugixml
+python@3.14
+qemu
+qt
+qt3d
+qt5compat
+qtbase
+qtcanvaspainter
+qtcharts
+qtconnectivity
+qtdatavis3d
+qtdeclarative
+qtgraphs
+qtgrpc
+qthttpserver
+qtimageformats
+qtlanguageserver
+qtlocation
+qtlottie
+qtmultimedia
+qtnetworkauth
+qtpositioning
+qtquick3d
+qtquick3dphysics
+qtquickeffectmaker
+qtquicktimeline
+qtremoteobjects
+qtscxml
+qtsensors
+qtserialbus
+qtserialport
+qtshadertools
+qtspeech
+qtsvg
+qttasktree
+qttools
+qttranslations
+qtvirtualkeyboard
+qtwebchannel
+qtwebengine
+qtwebsockets
+qtwebview
+quartz-wm
+railway
+ranger
+rav1e
+readline
+redis
+render
+ripgrep
+rubberband
+ruby
+rust
+sdl2-compat
+sdl3
+sevenzip
+simdjson
+simdutf
+sketchybar
+skhd
+sl
+snappy
+socat
+sox
+speex
+spotify_player
+sqld
+sqlite
+srt
+stow
+stylua
+suite-sparse
+supabase
+svt-av1
+taglib
+tbb
+television
+tesseract
+thefuck
+theora
+tmux
+tree
+tree-sitter
+tree-sitter-cli
+tty-clock
+ttyd
+turso
+twm
+typst
+unbound
+unibilium
+utf8cpp
+utf8proc
+uv
+uvwasi
+vde
+vhs
+vtk
+wavpack
+webp
+wget
+wtf
+x264
+x265
+xorgproto
+xplr
+xvid
+xz
+yabai
+yazi
+yyjson
+z3
+zathura
+zellij
+zeromq
+zig
+zigup
+zimg
+zoxide
+zsh-completions
+zsh-syntax-highlighting
+zstd
+dbeaver-community
+font-sf-mono-nerd-font-ligaturized
+font-symbols-only-nerd-font
+miniconda
+ngrok
+sf-symbols
+visual-studio-code

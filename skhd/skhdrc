@@ -30,7 +30,7 @@ hyper - t : /Applications/Alacritty.app/Contents/MacOS/alacritty
 #open discord
 ctrl + cmd - d : /Applications/Discord.app/Contents/MacOs/Discord
 ctrl + cmd - k : /Applications/Kitty.app/Contents/MacOs/kitty
-hyper - g : /Applications/Ghostty.app/Contents/MacOs/ghostty
+hyper - g : open -a Ghostty.app --args --quit-after-last-window-closed=true
 ctrl + cmd - s : brew services restart sketchybar
 ctrl + cmd - b : brew services restart borders
 hyper - p : pywal
